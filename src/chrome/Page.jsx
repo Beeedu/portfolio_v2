@@ -8,15 +8,23 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import { SectionTabs } from './Navigation';
+
+const MEASURE = '140ch';
+
+export function Measure({ ...props }) {
+    return <Box width="100%" maxWidth={MEASURE} {...props} />;
+}
 
 const PageMain = styled('main')(({ theme }) => ({
     display: 'block',
+    flexGrow: 1,
     backgroundColor: theme.palette.background.default,
+    overflowY: 'auto',
 }));
 
-export function Page(props) {
+export function Page({ children }) {
     const [openDrawer, setOpenDrawer] = useState(false);
     const theme = useTheme();
 
@@ -27,8 +35,24 @@ export function Page(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar position="fixed">
-                <Toolbar>
+            <AppBar
+                position="fixed"
+                sx={{
+                    '&.MuiAppBar-root': {
+                        boxShadow: 'none',
+                        backgroundImage: 'none',
+                    },
+                    backgroundColor: theme.palette.background.default,
+                }}
+            >
+                <Toolbar
+                    sx={{
+                        height: '64px',
+                        '&.MuiToolbar-root': {
+                            pl: 0,
+                        },
+                    }}
+                >
                     {isMobile ? (
                         <IconButton onClick={toggleDrawer}>
                             <MenuIcon />
@@ -37,20 +61,20 @@ export function Page(props) {
                         <SectionTabs />
                     )}
                 </Toolbar>
+                {/* <Divider /> */}
             </AppBar>
-            <NavDrawer open={openDrawer} />
-            <PageMain {...props} />
+            <NavDrawer open={openDrawer} onClose={toggleDrawer} />
+            <PageMain>
+                <Toolbar
+                    sx={{
+                        height: '64px',
+                        '&.MuiToolbar-root': {
+                            pl: 0,
+                        },
+                    }}
+                />
+                {children}
+            </PageMain>
         </Box>
-    );
-}
-
-function SectionTabs() {
-    return (
-        <Stack direction="row" gap={3}>
-            <Typography>Itroduction</Typography>
-            <Typography>Experience</Typography>
-            <Typography>Projects</Typography>
-            <Typography>Skills</Typography>
-        </Stack>
     );
 }

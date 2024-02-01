@@ -1,7 +1,7 @@
 import React from 'react';
 import { PortfolioPage } from './portfolio/PortfolioPage';
-import { ThemeProvider } from '@mui/material';
 import theme from './theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 function App() {
     return (
