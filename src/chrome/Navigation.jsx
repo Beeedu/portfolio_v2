@@ -1,42 +1,48 @@
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-function Tab({ children, ...props }) {
+function Tab({ to, children, ...props }) {
+    const location = useLocation();
+    const theme = useTheme();
+    console.log('to:', to);
+    console.log('location:', location);
     return (
-        <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            height="100%"
-            pl={2}
-            pr={2}
-            {...props}
+        <Link
+            to={to}
+            style={{
+                height: '100%',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor:
+                    to === location.hash
+                        ? theme.palette.primary.main
+                        : theme.palette.background.default,
+                textDecoration: 'none',
+                color: 'white',
+                padding: theme.spacing(3),
+            }}
         >
             <Typography>{children}</Typography>
-        </Box>
+        </Link>
     );
 }
 
-export function SectionTabs() {
-    const theme = useTheme();
+export function SectionTabs({ direction }) {
     return (
         <Stack
-            direction="row"
+            direction={direction || 'row'}
             justifyContent="center"
             alignItems="center"
-            height="100%"
+            height={direction === 'row' ? '100%' : 'auto'}
+            width={direction === 'column' ? '100%' : 'auto'}
         >
-            <Tab
-                onClick={() => console.log('click')}
-                sx={{ backgroundColor: theme.palette.primary.main }}
-            >
-                About
-            </Tab>
-            <Tab>Projects</Tab>
-            <Tab>Experience</Tab>
+            <Tab to="#about">About</Tab>
+            <Tab to="#projects">Projects</Tab>
         </Stack>
     );
 }

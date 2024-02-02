@@ -1,4 +1,4 @@
-const { styled } = require('@mui/material/styles');
+import { styled } from '@mui/material/styles';
 
 export const Sidebar = styled('div')({
     display: 'flex',

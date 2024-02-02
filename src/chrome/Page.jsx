@@ -8,8 +8,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Divider from '@mui/material/Divider';
 import { SectionTabs } from './Navigation';
+import Divider from '@mui/material/Divider';
 
 const MEASURE = '140ch';
 
@@ -58,10 +58,10 @@ export function Page({ children }) {
                             <MenuIcon />
                         </IconButton>
                     ) : (
-                        <SectionTabs />
+                        <SectionTabs direction="row" />
                     )}
                 </Toolbar>
-                {/* <Divider /> */}
+                <Divider />
             </AppBar>
             <NavDrawer open={openDrawer} onClose={toggleDrawer} />
             <PageMain>

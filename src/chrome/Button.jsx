@@ -1,5 +1,6 @@
-const { default: Button } = require('@mui/material/Button');
-const { styled } = require('@mui/material/styles');
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import React from 'react';
 
 export const PrimaryButton = styled(Button)(({ theme }) => ({
     color: 'white',
@@ -7,3 +8,11 @@ export const PrimaryButton = styled(Button)(({ theme }) => ({
     width: 'fit-content',
     boxShadow: 'none',
 }));
+
+export function ExternalLinkButton({ url, ...props }) {
+    return (
+        <a href={url} target="_blank" rel="noopener noreferrer">
+            <PrimaryButton {...props} />
+        </a>
+    );
+}

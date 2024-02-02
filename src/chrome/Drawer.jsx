@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
+import { SectionTabs } from './Navigation';
 
 export function NavDrawer({ open, onClose }) {
     const theme = useTheme();
@@ -19,11 +20,7 @@ export function NavDrawer({ open, onClose }) {
                 },
             }}
         >
-            <Stack p={3} gap={3}>
-                <Typography>About</Typography>
-                <Typography>Projects</Typography>
-                <Typography>Experience</Typography>
-            </Stack>
+            <SectionTabs direction="column" />
         </Drawer>
     );
 }

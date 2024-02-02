@@ -1,11 +1,12 @@
 import React from 'react';
-import { About } from './About';
-import { Experience } from './Experience';
-import { Projects } from './Projects';
+import { AboutSection } from './AboutSection';
+import { ProjectsSection } from './projects/ProjectsSection';
 import { Measure, Page } from '../chrome/Page';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
+import useScrollToHashElement from '../util/ScrollToHashElement';
+import { ContactSection } from './ContactSection';
 
 const CenteringBox = styled(Box)({
     display: 'flex',
@@ -27,11 +28,12 @@ export function PortfolioPage() {
 }
 
 function Portfolio() {
+    useScrollToHashElement();
     return (
-        <Stack p={5} gap={5}>
-            <About />
-            <Projects />
-            <Experience />
+        <Stack p={5} gap={7}>
+            <AboutSection id="about" />
+            <ProjectsSection id="projects" />
+            <ContactSection id="contact" />
         </Stack>
     );
 }
