@@ -26,6 +26,7 @@ function Tab({ to, children, ...props }) {
                 color: 'white',
                 padding: theme.spacing(3),
             }}
+            {...props}
         >
             <Typography>{children}</Typography>
         </Link>
@@ -43,6 +44,7 @@ export function SectionTabs({ direction }) {
         >
             <Tab to="#about">About</Tab>
             <Tab to="#projects">Projects</Tab>
+            <Tab to="#contact">Contact</Tab>
         </Stack>
     );
 }

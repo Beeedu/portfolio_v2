@@ -26,7 +26,7 @@ function useScrollToHashElement() {
             console.log('scrolling to ', hashElement);
             hashElement.scrollIntoView({
                 behavior: 'smooth',
-                block: 'nearest',
+                block: 'start',
             });
         }
     }, [hashElement]);

@@ -1,6 +1,4 @@
 import Drawer from '@mui/material/Drawer';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
 import { SectionTabs } from './Navigation';

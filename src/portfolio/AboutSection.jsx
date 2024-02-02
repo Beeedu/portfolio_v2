@@ -50,7 +50,7 @@ function Introduction() {
                 and anything cool. In my freetime I'm cooking, rock climbing, or
                 playing video games.
             </SubjectDetails>
-            <ExternalLinkButton url="resources/Brandon_Lynch_Resume.pdf">
+            <ExternalLinkButton url="Brandon_Lynch_Resume.pdf">
                 Résumé
             </ExternalLinkButton>
         </Stack>
