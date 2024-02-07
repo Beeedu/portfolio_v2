@@ -6,24 +6,22 @@ import { Subject, SubjectDetails, Title } from '../chrome/Typography';
 import Box from '@mui/material/Box';
 import { SecondaryDivider } from '../chrome/Divider';
 
-export function AboutSection({ id }) {
+export function AboutOutlet() {
     return (
-        <div id={id}>
-            <Stack gap={3}>
-                <Stack>
-                    <Title>About</Title>
-                    <SecondaryDivider />
-                </Stack>
-                <Sidebar sx={{ gap: 3 }}>
-                    <SidebarMain>
-                        <Introduction />
-                    </SidebarMain>
-                    <SidebarAside>
-                        <ProfilePicture />
-                    </SidebarAside>
-                </Sidebar>
+        <Stack gap={3}>
+            <Stack>
+                <Title>About</Title>
+                <SecondaryDivider />
             </Stack>
-        </div>
+            <Sidebar sx={{ gap: 3 }}>
+                <SidebarMain>
+                    <Introduction />
+                </SidebarMain>
+                <SidebarAside>
+                    <ProfilePicture />
+                </SidebarAside>
+            </Sidebar>
+        </Stack>
     );
 }
 

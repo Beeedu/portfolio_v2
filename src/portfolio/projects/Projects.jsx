@@ -9,8 +9,9 @@ import {
     PostmanSkill,
     PythonSkill,
     TensorflowSkill,
-} from '../Skills';
-import { Thumbnail } from './ProjectsSection';
+} from './Skills';
+import { Thumbnail } from './ProjectsOutlet';
+import { Cluster } from '../../chrome/Cluster';
 
 export function Project({
     title,
@@ -22,21 +23,21 @@ export function Project({
 }) {
     return (
         <Stack gap={1}>
-            <Stack direction="row" alignItems="center" gap={1}>
+            <Cluster gap={1}>
                 <Subject>{title}</Subject>
                 {skills.map((skill, i) => (
                     <div key={i}>{skill}</div>
                 ))}
-            </Stack>
+            </Cluster>
             {thumbnail}
             <SubjectDetails>{description}</SubjectDetails>
-            <Stack direction="row" gap={3}>
+            <Cluster flexDirection="row-reverse" gap={3}>
                 {links.map((link, i) => (
                     <ExternalLinkButton key={i} url={link.url}>
                         {link.name}
                     </ExternalLinkButton>
                 ))}
-            </Stack>
+            </Cluster>
         </Stack>
     );
 }

@@ -7,6 +7,9 @@ export const PrimaryButton = styled(Button)(({ theme }) => ({
     borderRadius: 0,
     width: 'fit-content',
     boxShadow: 'none',
+    '&:hover': {
+        transform: 'translate(1px, 1px)',
+    },
 }));
 
 export function ExternalLinkButton({ url, ...props }) {

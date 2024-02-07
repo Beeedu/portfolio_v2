@@ -26,30 +26,28 @@ function ProjectItem({ children }) {
     );
 }
 
-export function ProjectsSection({ id }) {
+export function ProjectsOutlet() {
     return (
-        <div id={id}>
-            <Stack gap={3}>
-                <Stack>
-                    <Title>Projects</Title>
-                    <SecondaryDivider />
-                </Stack>
-                <ProjectsGrid>
-                    <ProjectItem>
-                        <ProjectShepherd />
-                    </ProjectItem>
-                    <ProjectItem>
-                        <ProjectChatterbug />
-                    </ProjectItem>
-                    <ProjectItem>
-                        <ProjectCardGenerator />
-                    </ProjectItem>
-                    <ProjectItem>
-                        <ProjectTriviaMaze />
-                    </ProjectItem>
-                </ProjectsGrid>
+        <Stack gap={3}>
+            <Stack>
+                <Title>Projects</Title>
+                <SecondaryDivider />
             </Stack>
-        </div>
+            <ProjectsGrid>
+                <ProjectItem>
+                    <ProjectShepherd />
+                </ProjectItem>
+                <ProjectItem>
+                    <ProjectChatterbug />
+                </ProjectItem>
+                <ProjectItem>
+                    <ProjectCardGenerator />
+                </ProjectItem>
+                <ProjectItem>
+                    <ProjectTriviaMaze />
+                </ProjectItem>
+            </ProjectsGrid>
+        </Stack>
     );
 }
 
