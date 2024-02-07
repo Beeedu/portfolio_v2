@@ -27,11 +27,11 @@ export function AboutOutlet() {
 
 function ProfilePicture() {
     return (
-        <Box>
+        <Box width="100%" maxWidth="350rem">
             <img
                 src="./portrait.jpg"
                 alt="profile"
-                width="350rem"
+                width="100%"
                 style={{ borderRadius: '50%' }}
             />
         </Box>

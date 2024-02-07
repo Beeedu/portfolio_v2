@@ -12,7 +12,7 @@ import {
 
 function ProjectsGrid({ children }) {
     return (
-        <Grid container spacing={5}>
+        <Grid container spacing={7}>
             {children}
         </Grid>
     );
@@ -49,8 +49,4 @@ export function ProjectsOutlet() {
             </ProjectsGrid>
         </Stack>
     );
-}
-
-export function Thumbnail({ src, alt, ...props }) {
-    return <img src={src} alt={alt} width="100%" {...props} />;
 }

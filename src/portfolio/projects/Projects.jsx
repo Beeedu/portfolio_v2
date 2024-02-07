@@ -10,8 +10,11 @@ import {
     PythonSkill,
     TensorflowSkill,
 } from './Skills';
-import { Thumbnail } from './ProjectsOutlet';
 import { Cluster } from '../../chrome/Cluster';
+
+function Thumbnail({ src, alt, ...props }) {
+    return <img src={src} alt={alt} width="100%" {...props} />;
+}
 
 export function Project({
     title,
