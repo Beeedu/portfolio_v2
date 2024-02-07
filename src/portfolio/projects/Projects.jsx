@@ -51,7 +51,7 @@ export function ProjectShepherd() {
             title="Shepherd"
             thumbnail={
                 <Thumbnail
-                    src="./shepherd_thumbnail.png"
+                    src="./resources/shepherd_thumbnail.png"
                     alt="shepherd game menu screen"
                 />
             }
@@ -78,7 +78,7 @@ export function ProjectChatterbug() {
             title="Chatterbug"
             thumbnail={
                 <Thumbnail
-                    src="./chatterbug_thumbnail.png"
+                    src="./resources/chatterbug_thumbnail.png"
                     alt="chatterbug login screen"
                 />
             }
@@ -110,7 +110,7 @@ export function ProjectCardGenerator() {
             title="MTG Card Generator"
             thumbnail={
                 <Thumbnail
-                    src="./thesis_thumbnail.png"
+                    src="./resources/thesis_thumbnail.png"
                     alt="thesis presentation slide"
                 />
             }
@@ -137,7 +137,7 @@ export function ProjectTriviaMaze() {
             title="Trivia Maze"
             thumbnail={
                 <Thumbnail
-                    src="./trivia_maze_thumbnail.png"
+                    src="./resources/trivia_maze_thumbnail.png"
                     alt="trivia maze menu screen"
                 />
             }
