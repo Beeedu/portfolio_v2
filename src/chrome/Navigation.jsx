@@ -7,7 +7,6 @@ import { Link, useLocation } from 'react-router-dom';
 function Tab({ to, children, ...props }) {
     const location = useLocation();
     const theme = useTheme();
-    console.log('location: ', location);
     return (
         <Link
             to={to}

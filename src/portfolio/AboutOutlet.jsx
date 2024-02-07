@@ -29,7 +29,7 @@ function ProfilePicture() {
     return (
         <Box width="100%" maxWidth="350rem">
             <img
-                src="./resources/portrait.jpg"
+                src="/resources/portrait.jpg"
                 alt="profile"
                 width="100%"
                 style={{ borderRadius: '50%' }}

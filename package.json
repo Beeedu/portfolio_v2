@@ -1,7 +1,6 @@
 {
     "name": "portfolio_v2",
     "version": "0.1.0",
-    "homepage": "https://beeedu.github.io/portfolio_v2/",
     "private": false,
     "dependencies": {
         "@emotion/react": "^11.11.3",

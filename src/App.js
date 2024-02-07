@@ -2,7 +2,7 @@ import React from 'react';
 import { PortfolioPage } from './portfolio/PortfolioPage';
 import theme from './theme';
 import { ThemeProvider } from '@mui/material/styles';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom';
 import { AboutOutlet } from './portfolio/AboutOutlet';
 import { ContactOutlet } from './portfolio/ContactOutlet';
 import { ProjectsOutlet } from './portfolio/projects/ProjectsOutlet';
