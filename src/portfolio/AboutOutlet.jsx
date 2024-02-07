@@ -5,23 +5,26 @@ import { ExternalLinkButton } from '../chrome/Button';
 import { Subject, SubjectDetails, Title } from '../chrome/Typography';
 import Box from '@mui/material/Box';
 import { SecondaryDivider } from '../chrome/Divider';
+import { SlideOutlet } from '../chrome/Outlet';
 
 export function AboutOutlet() {
     return (
-        <Stack gap={3}>
-            <Stack>
-                <Title>About</Title>
-                <SecondaryDivider />
+        <SlideOutlet>
+            <Stack gap={3}>
+                <Stack>
+                    <Title>About</Title>
+                    <SecondaryDivider />
+                </Stack>
+                <Sidebar sx={{ gap: 3 }}>
+                    <SidebarMain>
+                        <Introduction />
+                    </SidebarMain>
+                    <SidebarAside>
+                        <ProfilePicture />
+                    </SidebarAside>
+                </Sidebar>
             </Stack>
-            <Sidebar sx={{ gap: 3 }}>
-                <SidebarMain>
-                    <Introduction />
-                </SidebarMain>
-                <SidebarAside>
-                    <ProfilePicture />
-                </SidebarAside>
-            </Sidebar>
-        </Stack>
+        </SlideOutlet>
     );
 }
 
@@ -48,7 +51,7 @@ function Introduction() {
                 and anything cool. In my freetime I'm cooking, rock climbing, or
                 playing video games.
             </SubjectDetails>
-            <ExternalLinkButton url="Brandon_Lynch_Resume.pdf">
+            <ExternalLinkButton url="resources/Brandon_Lynch_Resume.pdf">
                 Résumé
             </ExternalLinkButton>
         </Stack>

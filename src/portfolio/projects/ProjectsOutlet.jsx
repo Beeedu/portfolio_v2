@@ -9,6 +9,7 @@ import {
     ProjectShepherd,
     ProjectTriviaMaze,
 } from './Projects';
+import { SlideOutlet } from '../../chrome/Outlet';
 
 function ProjectsGrid({ children }) {
     return (
@@ -28,25 +29,27 @@ function ProjectItem({ children }) {
 
 export function ProjectsOutlet() {
     return (
-        <Stack gap={3}>
-            <Stack>
-                <Title>Projects</Title>
-                <SecondaryDivider />
+        <SlideOutlet>
+            <Stack gap={3}>
+                <Stack>
+                    <Title>Projects</Title>
+                    <SecondaryDivider />
+                </Stack>
+                <ProjectsGrid>
+                    <ProjectItem>
+                        <ProjectShepherd />
+                    </ProjectItem>
+                    <ProjectItem>
+                        <ProjectChatterbug />
+                    </ProjectItem>
+                    <ProjectItem>
+                        <ProjectCardGenerator />
+                    </ProjectItem>
+                    <ProjectItem>
+                        <ProjectTriviaMaze />
+                    </ProjectItem>
+                </ProjectsGrid>
             </Stack>
-            <ProjectsGrid>
-                <ProjectItem>
-                    <ProjectShepherd />
-                </ProjectItem>
-                <ProjectItem>
-                    <ProjectChatterbug />
-                </ProjectItem>
-                <ProjectItem>
-                    <ProjectCardGenerator />
-                </ProjectItem>
-                <ProjectItem>
-                    <ProjectTriviaMaze />
-                </ProjectItem>
-            </ProjectsGrid>
-        </Stack>
+        </SlideOutlet>
     );
 }

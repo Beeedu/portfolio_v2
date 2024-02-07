@@ -11,6 +11,21 @@ import {
     TensorflowSkill,
 } from './Skills';
 import { Cluster } from '../../chrome/Cluster';
+import { styled } from '@mui/material/styles';
+
+function ExternalLink({ url, children }) {
+    return (
+        <HoverLink href={url} target="_blank" rel="noopener noreferrer">
+            {children}
+        </HoverLink>
+    );
+}
+
+const HoverLink = styled('a')(({ theme }) => ({
+    '&:hover': {
+        transform: 'translate(1px, 1px)',
+    },
+}));
 
 function Thumbnail({ src, alt, ...props }) {
     return <img src={src} alt={alt} width="100%" {...props} />;
@@ -32,7 +47,7 @@ export function Project({
                     <div key={i}>{skill}</div>
                 ))}
             </Cluster>
-            {thumbnail}
+            <ExternalLink url={thumbnailLink}>{thumbnail}</ExternalLink>
             <SubjectDetails>{description}</SubjectDetails>
             <Cluster flexDirection="row-reverse" gap={3}>
                 {links.map((link, i) => (
@@ -55,7 +70,7 @@ export function ProjectShepherd() {
                     alt="shepherd game menu screen"
                 />
             }
-            thumbnailLink={undefined}
+            thumbnailLink="https://www.youtube.com/watch?v=c-rvziL7_Z8"
             description="Play as a shepherd guiding his sheep past viscious wolves in this fun web game"
             links={[
                 {
@@ -82,7 +97,7 @@ export function ProjectChatterbug() {
                     alt="chatterbug login screen"
                 />
             }
-            thumbnailLink={undefined}
+            thumbnailLink="https://youtu.be/YfD_GqHwWZg"
             description="A fully-fleged messaging and weather mobile app for Android"
             links={[
                 {
@@ -114,7 +129,7 @@ export function ProjectCardGenerator() {
                     alt="thesis presentation slide"
                 />
             }
-            thumbnailLink={undefined}
+            thumbnailLink="https://www.youtube.com/watch?v=vNRrNw_zk6Y"
             description="Honors research project and thesis using RNNs to generate new Magic: The Gathering cards"
             links={[
                 {
@@ -141,7 +156,7 @@ export function ProjectTriviaMaze() {
                     alt="trivia maze menu screen"
                 />
             }
-            thumbnailLink={undefined}
+            thumbnailLink="https://github.com/kvietcong/tcss360-trivia-maze"
             description="Blindly navigate through a maze of rooms by answering trivia questions"
             links={[
                 {
