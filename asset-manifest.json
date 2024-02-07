@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/www.brandonlynch.me/static/js/main.ebf0b081.js",
-    "index.html": "/www.brandonlynch.me/index.html",
-    "main.ebf0b081.js.map": "/www.brandonlynch.me/static/js/main.ebf0b081.js.map"
+    "main.js": "/portfolio_v2/static/js/main.ebf0b081.js",
+    "index.html": "/portfolio_v2/index.html",
+    "main.ebf0b081.js.map": "/portfolio_v2/static/js/main.ebf0b081.js.map"
   },
   "entrypoints": [
     "static/js/main.ebf0b081.js"
