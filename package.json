@@ -1,8 +1,8 @@
 {
     "name": "portfolio_v2",
     "version": "0.1.0",
-    "homepage": "www.brandonlynch.me",
-    "private": true,
+    "homepage": "https://beeedu.github.io/portfolio_v2/",
+    "private": false,
     "dependencies": {
         "@emotion/react": "^11.11.3",
         "@emotion/styled": "^11.11.0",
