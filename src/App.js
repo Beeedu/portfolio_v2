@@ -10,7 +10,7 @@ import { ProjectsOutlet } from './portfolio/projects/ProjectsOutlet';
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<PortfolioPage />}>
                         <Route
